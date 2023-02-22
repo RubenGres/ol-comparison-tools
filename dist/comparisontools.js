@@ -264,7 +264,6 @@ class ComparisonTools extends ol.control.Bar {
       } else {
         this.getRightLayer().setVisible(true);
         this.layerGroup_.getLayers().remove(this.getRightLayer());
-        console.log(this)
         this.getClonedMap().addLayer(this.getRightLayer());
       }
       this.getMap().updateSize();
@@ -442,7 +441,8 @@ class ComparisonTools extends ol.control.Bar {
   * @return {module:ol/map} cloned map
   */
   getClonedMap() {
-    return this.clonedMap_;
+    // return this.clonedMap_;
+    return this.getMap().clonedMap_;
   }
   /**
    * Set layer group
@@ -473,6 +473,7 @@ class ComparisonTools extends ol.control.Bar {
     return this.hSwipeControl_;
   }
 }
+module.exports.ComparisonTools = ComparisonTools;
 
 /**
  * @module ol/control/comparisontools

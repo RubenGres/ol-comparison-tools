@@ -2,6 +2,8 @@
  * @module ol/control/comparisontools
  */
 
+import ol_control_ComparisonTools from "../../../new/src/control/comparisontools";
+
 /**
  * @classdesc
  * An Control bar with comparison tools
@@ -297,7 +299,6 @@ class ComparisonTools extends ol.control.Bar {
       } else {
         this.getRightLayer().setVisible(true);
         this.layerGroup_.getLayers().remove(this.getRightLayer());
-        console.log(this)
         this.getClonedMap().addLayer(this.getRightLayer());
       }
 
@@ -503,7 +504,8 @@ class ComparisonTools extends ol.control.Bar {
   * @return {module:ol/map} cloned map
   */
   getClonedMap() {
-    return this.clonedMap_;
+    // return this.clonedMap_;
+    return this.getMap().clonedMap_;
   }
 
   /**
@@ -537,7 +539,6 @@ class ComparisonTools extends ol.control.Bar {
   getHSwipeControl() {
     return this.hSwipeControl_;
   }
-
 }
 
 export default ComparisonTools;
