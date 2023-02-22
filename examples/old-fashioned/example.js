@@ -21,7 +21,7 @@
     })
   });
 
-  var control = new ol.control.ComparisonTools({
+  var control = new ComparisonTools({
     leftLayer: layer1,
     rightLayer: layer2
   });

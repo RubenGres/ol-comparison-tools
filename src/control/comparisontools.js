@@ -19,7 +19,7 @@
  *    displayMode {string}
  *    controlNames {Array.<string>} a list of control name to add to the comparison toolset (can be 'hSlider', 'vSlider', 'scope', 'clipLayer', 'doubleMap')
  */
-class ol_control_ComparisonTools extends ol.control.Bar {
+class ComparisonTools extends ol.control.Bar {
   constructor(options) {
     super(options);
 
@@ -297,6 +297,7 @@ class ol_control_ComparisonTools extends ol.control.Bar {
       } else {
         this.getRightLayer().setVisible(true);
         this.layerGroup_.getLayers().remove(this.getRightLayer());
+        console.log(this)
         this.getClonedMap().addLayer(this.getRightLayer());
       }
 
@@ -498,11 +499,11 @@ class ol_control_ComparisonTools extends ol.control.Bar {
   };
 
   /**
-   * Get cloned map
-   * @return {module:ol/map} cloned map
-   */
+  * Get cloned map
+  * @return {module:ol/map} cloned map
+  */
   getClonedMap() {
-    return this.getMap().clonedMap_;
+    return this.clonedMap_;
   }
 
   /**
@@ -537,14 +538,6 @@ class ol_control_ComparisonTools extends ol.control.Bar {
     return this.hSwipeControl_;
   }
 
-  /**
-   * Get cloned map
-   * @return {module:ol/map} cloned map
-   */
-  getClonedMap() {
-    return this.clonedMap_;
-  }
-
 }
 
-export default ol_control_ComparisonTools;
+export default ComparisonTools;
