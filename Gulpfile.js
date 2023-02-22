@@ -10,7 +10,7 @@ const gulp = require('gulp'),
     webpack = require('webpack-stream'),
     cleanCSS = require('gulp-clean-css'),
     connect = require('gulp-connect'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass')(require('node-sass'));
 
 function transform() {
   return through.obj(function(file, encoding, callback) {
