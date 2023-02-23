@@ -5,10 +5,10 @@
  */
 
 import ol_inherits from '../util';
-import {Control as ol_control_Control} from 'ol/control.js';
-import {Raster as ol_source_Raster} from 'ol/source.js';
-import {Image as ol_layer_Image} from 'ol/layer.js';
-import ol_control_Toggle from 'ol-ext/control/Toggle.js';
+import {Control as ol_control_Control} from 'ol.control.js';
+import {Raster as ol_source_Raster} from 'ol.source.js';
+import {Image as ol_layer_Image} from 'ol.layer.js';
+import ol_control_Toggle from 'ol-ext.control.Toggle.js';
 
 /**
  *

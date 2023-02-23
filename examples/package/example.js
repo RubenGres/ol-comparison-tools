@@ -1,6 +1,6 @@
 import {Map, View} from 'ol';
-import TileLayer from 'ol/layer/Tile';
-import {TileJSON as TileJSONSource, OSM as OSMSource, TileArcGISRest as TileArcGISRestSource} from 'ol/source.js';
+import TileLayer from 'ol.layer.Tile';
+import {TileJSON as TileJSONSource, OSM as OSMSource, TileArcGISRest as TileArcGISRestSource} from 'ol.source.js';
 
 import {ComparisonTools as ComparisonToolsControl} from '../../src/control.js';
 import {HistogramMatching as HistogramMatchingControl} from '../../src/control.js';

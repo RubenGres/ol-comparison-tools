@@ -18,7 +18,7 @@
  *    displayMode {string}
  *    controlNames {Array.<string>} a list of control name to add to the comparison toolset (can be 'hSlider', 'vSlider', 'scope', 'clipLayer', 'doubleMap')
  */
-class ComparisonTools extends ol.control.Bar {
+ol.control.ComparisonTool = class ComparisonTools extends ol.control.Bar {
   constructor(options) {
     super(options);
     if (!options) {
@@ -473,7 +473,6 @@ class ComparisonTools extends ol.control.Bar {
     return this.hSwipeControl_;
   }
 }
-module.exports.ComparisonTools = ComparisonTools;
 
 /**
  * @module ol/control/comparisontools

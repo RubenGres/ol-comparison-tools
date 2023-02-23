@@ -2,7 +2,6 @@
  * @module ol/control/comparisontools
  */
 
-import ol_control_ComparisonTools from "../../../new/src/control/comparisontools";
 
 /**
  * @classdesc
@@ -21,7 +20,7 @@ import ol_control_ComparisonTools from "../../../new/src/control/comparisontools
  *    displayMode {string}
  *    controlNames {Array.<string>} a list of control name to add to the comparison toolset (can be 'hSlider', 'vSlider', 'scope', 'clipLayer', 'doubleMap')
  */
-class ComparisonTools extends ol.control.Bar {
+var ol_control_ComparisonTool = class ComparisonTools extends ol.control.Bar {
   constructor(options) {
     super(options);
 
@@ -541,4 +540,4 @@ class ComparisonTools extends ol.control.Bar {
   }
 }
 
-export default ComparisonTools;
+export default ol_control_ComparisonTool;
