@@ -22,11 +22,18 @@
  */
 var ol_control_ComparisonTool = class ComparisonTools extends ol.control.Bar {
   constructor(options) {
-    super(options);
-
     if (!options) {
       options = {};
     }
+
+    super({
+      ...options,
+      group: true,
+      toggleOne: true,
+      className: options.className,
+      controls: []
+    });
+
     let self = this;
 
     this.controls_ = [];
@@ -40,14 +47,6 @@ var ol_control_ComparisonTool = class ComparisonTools extends ol.control.Bar {
     this.vSwipeControl_;
     this.hSwipeControl_;
 
-    new ol.control.Bar(this, {
-      group: true,
-      toggleOne: true,
-      className: options.className,
-      controls: this.controls_
-    }
-    );
-
     let controlNames = options.controlNames || ['hSlider', 'vSlider', 'scope', 'clipLayer', 'doubleMap'];
 
     if (options.rightLayer) {
@@ -60,7 +59,6 @@ var ol_control_ComparisonTool = class ComparisonTools extends ol.control.Bar {
     if (options.layerGroup) {
       this.layerGroup_ = options.layerGroup;
     }
-
 
     this.useCloneLayer_ = options.useCloneLayer === true ? options.useCloneLayer : false;
 
